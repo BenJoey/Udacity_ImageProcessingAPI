@@ -1,1 +1,3 @@
-it("Dummy", () => {expect(1).toBeLessThan(2);})
+it('Dummy', () => {
+  expect(1).toBeLessThan(2);
+});
