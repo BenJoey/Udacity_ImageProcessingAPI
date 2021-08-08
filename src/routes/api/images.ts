@@ -4,7 +4,7 @@ const images = express.Router();
 
 images.get('/', (req, res) => {
   console.log(req.query.filename);
-  res.sendFile(req.query.filename as string, { root: 'assets/' });
+  res.sendFile(req.query.filename as string, { root: 'assets/full' });
 });
 
 export default images;
