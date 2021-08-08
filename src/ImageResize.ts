@@ -11,8 +11,7 @@ const ImageResize = async (
       path.join('./assets', 'full', filename + '.jpg')
     );
     const newFileName = `${filename}_${width}_${height}.${image.getExtension()}`;
-    const resizedImage = image.resize(width, height, Jimp.RESIZE_BEZIER);
-    await resizedImage.writeAsync(path.join('./assets', 'thumb', newFileName));
+    await image.resize(width, height, Jimp.RESIZE_BEZIER).writeAsync(path.join('./assets', 'thumb', newFileName));
     return { success: true, result: newFileName };
   } catch (err) {
     return { success: false, result: err };
