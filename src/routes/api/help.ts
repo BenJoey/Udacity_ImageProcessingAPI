@@ -5,7 +5,7 @@ import fs from 'fs';
 const help = express.Router();
 
 help.get('/', (req, res) => {
-  let helpText: string[] = [
+  const helpText: string[] = [
     'API usage: /api/images?filename={image_name}&width={required_width}&height={required_height}</br>',
     'Images available to resize:'
   ];
